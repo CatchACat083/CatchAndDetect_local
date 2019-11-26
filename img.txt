@@ -1,0 +1,14 @@
+/home/ubuntu/git/CatchAndDetect/20191022/1.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/2.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/3.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/4.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/5.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/6.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/7.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/8.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/9.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/10.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/11.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/12.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/13.jpg
+/home/ubuntu/git/CatchAndDetect/20191022/14.jpg
