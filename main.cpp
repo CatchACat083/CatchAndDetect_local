@@ -7,31 +7,22 @@
 #include "imageCut.h"
 #include "time.h"
 #include "circleProcess.h"
+#include "amimonLocalImg.h"
+#include "insightCatchImg.h"
 
-#define TEST_IMG_PATH "/home/ubuntu/git/CatchAndDetect/img.txt"
+#define TEST_IMG_PATH "/home/ubuntu/git/CatchAndDetect/img.txt"         //local步骤中image list的存放位置
 #define YOLO_CFG_PATH "/home/ubuntu/git/darknet-master/cfg/yolov3test1-voc.cfg"
 #define YOLO_WEG_PATH "/home/ubuntu/git/darknet-master/backup/yolov3tuchuan-voc_10000.weights"
 #define YOLO_NAM_PATH "/home/ubuntu/git/darknet-master/data/coco.names"
-#define IMG_CAL_NAME "/home/ubuntu/git/CatchAndDetect/calibration/"
-#define IMG_STI_NAME "/home/ubuntu/git/CatchAndDetect/stitcher/"
-#define IMG_YOLO_NAME "/home/ubuntu/git/CatchAndDetect/yoloresult/"
+#define IMG_CAL_NAME "/home/ubuntu/git/CatchAndDetect/calibration/"     //采集并完成畸变校正的图像位置
+#define IMG_STI_NAME "/home/ubuntu/git/CatchAndDetect/stitcher/"        //拼接完成的大图的位置
+#define IMG_YOLO_NAME "/home/ubuntu/git/CatchAndDetect/yoloresult/"     //yolo最终得到结果的大图的位置
+#define RTSP_ADD "rtsp://192.168.2.220:554/stream/1"                    //insight图传的rtsp地址
+#define QGC_TXT_PATH "/home/ubuntu/Project/2019Match_ZSKT/Result/QGCtxt/"   //QGC保存的txt文件的地址
 
-#define CONNEX_IN_HEI 1080 //CONNEX图传传入的图像_高度
-#define CONNEX_IN_WID 1920 //CONNEX图传传入的图像_宽度
-#define CONNEX_CAL_HEI 980 //CONNEX图传校正后的图像_高度
-#define CONNEX_CAL_WID 1870 //CONNEX图传校正后的图像_宽度
+#define IMG_NUM_TOTAL 6     //规划图像采集的数量
 
-//去除connex图传上下黑边_黑边只在高度上出现_高度上可用像素159_919
-#define CONNEX_REZ_TOP 159
-#define CONNEX_REZ_LEFT 0
-#define CONNEX_REZ_HEI 760
-#define CONNEX_REZ_WID 1920
 
-//去除畸变造成的黑边_黑边在高度和宽度上都出现_高度上可用像素50_1030_宽度上可用像素25_1895
-#define CONNEX_CAL_REZ_TOP 50
-#define CONNEX_CAL_REZ_LEFT 25
-#define CONNEX_CAL_REZ_HEI 980
-#define CONNEX_CAL_REZ_WID 1870
 
 //是否在stitch中使用GPU
 bool try_use_gpu = true;
@@ -83,111 +74,23 @@ int main()
     circle_result_class circleResult; //识别圆的结果
 
     /**
-     * Part1第一次读取图像 根据预先设定的图像畸变参数对connex数传采集的图像进行预处理
+     * Part1 读取图像 根据预先设定的图像畸变参数对connex数传采集的图像进行预处理
      * Q: 图像预处理部分只做了畸变处理并去除connex黑边 可以根据需要再添加
      */
+    string imgListPath = TEST_IMG_PATH;
+    string imgFileFolder = IMG_CAL_NAME;
+    imageLocal_amiomon(imageCatchesVector,imgListPath,imgFileFolder);
 
-    //图像输入
-    ifstream fileInputstream(TEST_IMG_PATH);
-    string imgNameString;
-    getline(fileInputstream, imgNameString);
-    Mat imgCaptureMat = imread(imgNameString);
+    /****
+     * insight图传qgc采集
+    string rtspAddress = RTSP_ADD;
+    string qgcTxtFolder = QGC_TXT_PATH;
+    string imgFileFolder = IMG_CAL_NAME;
+    int imgTotalNum = IMG_NUM_TOTAL;
+    imageCatch_insight(imageCatchesVector,rtspAddress,qgcTxtFolder,imgFileFolder,imgTotalNum);
+     **/
 
-    if(imgCaptureMat.rows == CONNEX_IN_HEI && imgCaptureMat.cols == CONNEX_IN_WID){
-        cout << ">>>> image capture success" << endl;
-    }else{cout << "!!!!! image capture wrong size" << endl;}
 
-    //图像size
-    Size imgSize;
-    imgSize = imgCaptureMat.size();
-
-    // 设置相机畸变参数
-    Mat cameraMatrix = Mat::eye(3, 3, CV_64F);
-    cameraMatrix.at<double>(0, 0) = 1.7045143537356953e+03;
-    cameraMatrix.at<double>(0, 1) = 0;
-    cameraMatrix.at<double>(0, 2) = 9.5950000000000000e+02;
-    cameraMatrix.at<double>(1, 1) = 1.7045143537356953e+03;
-    cameraMatrix.at<double>(1, 2) = 5.3950000000000000e+02;
-
-    Mat distCoeffs = Mat::zeros(5, 1, CV_64F);
-    distCoeffs.at<double>(0, 0) = -3.1946395398598881e-01;
-    distCoeffs.at<double>(1, 0) = 1.9135700460721553e-01;
-    distCoeffs.at<double>(2, 0) = 0;
-    distCoeffs.at<double>(3, 0) = 0;
-    distCoeffs.at<double>(4, 0) = -6.3363712039867705e-03;
-
-    //畸变map计算
-    Mat imgMap1, imgMap2;
-    initUndistortRectifyMap(cameraMatrix, distCoeffs, Mat(),
-                            getOptimalNewCameraMatrix(cameraMatrix, distCoeffs, imgSize, 1, imgSize, 0),
-                            imgSize, CV_16SC2, imgMap1, imgMap2);
-
-    Mat imgRezMat(CONNEX_IN_HEI, CONNEX_IN_WID, imgCaptureMat.type()); //去除connex图传上下黑边后的图像Mat
-    Mat imgRezCalMat(CONNEX_IN_HEI, CONNEX_IN_WID, imgCaptureMat.type()); //畸变校正后的图像
-    Mat imgRezCalRezMat(CONNEX_CAL_HEI, CONNEX_CAL_WID, imgCaptureMat.type()); //畸变校正之后黑边去除的图像
-
-    //去除connex图传上下黑边_黑边只在高度上出现_高度上可用像素159_919
-    resizeImage(imgCaptureMat,imgRezMat, CONNEX_REZ_TOP, CONNEX_REZ_LEFT, CONNEX_REZ_HEI, CONNEX_REZ_WID);
-    //畸变校正
-    remap(imgRezMat, imgRezCalMat, imgMap1, imgMap2, INTER_LINEAR);
-    //去除畸变造成的黑边_黑边在高度和宽度上都出现_高度上可用像素50_1030_宽度上可用像素25_1895
-    resizeImage(imgRezCalMat,imgRezCalRezMat,CONNEX_CAL_REZ_TOP,CONNEX_CAL_REZ_LEFT,CONNEX_CAL_REZ_HEI,CONNEX_CAL_REZ_WID);
-
-    //将照片旋转成为竖幅便于拼接
-    transpose(imgRezCalRezMat, imgRezCalRezMat);
-    flip(imgRezCalRezMat,imgRezCalRezMat,1);
-
-    cout << ">>>> frame 0 calibration success" << endl;
-    cout << imgRezCalRezMat.rows << imgRezCalRezMat.cols << endl;
-    if(imgRezCalRezMat.rows == CONNEX_CAL_WID && imgRezCalRezMat.cols == CONNEX_CAL_HEI){
-        cout << ">>>> frame 0 calibration success" << endl;
-    }else{cout << "!!!!! frame 0 calibration wrong size" << endl;}
-
-    //将该帧图像加入到image_catches Vector中
-    imageCatchesVector.push_back(imgRezCalRezMat);
-
-    /**
-     * Part2重复读取图像 每次读取图像后都对图像进行去畸变预处理
-     * Q: 实际飞行过程中会依据MAV_IMAGE_CAPTURED对图像进行处理
-     */
-    int i = 1;
-    while(getline(fileInputstream, imgNameString))
-    {
-
-        Mat imgCaptureMat = imread(imgNameString);
-        Mat imgRezMat(CONNEX_IN_HEI, CONNEX_IN_WID, imgCaptureMat.type()); //去除connex图传上下黑边后的图像Mat
-        Mat imgRezCalMat(CONNEX_IN_HEI, CONNEX_IN_WID, imgCaptureMat.type()); //畸变校正后的图像
-        Mat imgRezCalRezMat(CONNEX_CAL_HEI, CONNEX_CAL_WID, imgCaptureMat.type()); //畸变校正之后黑边去除的图像
-
-        //去除connex图传上下黑边_黑边只在高度上出现_高度上可用像素159_919
-        resizeImage(imgCaptureMat,imgRezMat, 159, 0, 760, 1920);
-        //畸变校正
-        remap(imgRezMat, imgRezCalMat, imgMap1, imgMap2, INTER_LINEAR);
-        //去除畸变造成的黑边_黑边在高度和宽度上都出现_高度上可用像素50_1030_宽度上可用像素25_1895
-        resizeImage(imgRezCalMat,imgRezCalRezMat,50,25,980,1870);
-        cout << ">>>> frame "<< i << " capture success" << endl;
-
-        //将照片旋转成为竖幅便于拼接
-        transpose(imgRezCalRezMat, imgRezCalRezMat);
-        flip(imgRezCalRezMat,imgRezCalRezMat,1);
-
-        if(imgRezCalRezMat.rows == 1870 && imgRezCalRezMat.cols == 980){
-            cout << ">>>> frame "<< i << " calibration success" << endl;
-        }else{cout << "!!!!! frame "<< i << " calibration wrong size" << endl;}
-
-        //将该帧图像加入到imageCatchesVector中
-        imageCatchesVector.push_back(imgRezCalRezMat);
-        //将每一帧图像保存在本机
-        string result_name = IMG_CAL_NAME + to_string(i) +"_"+ getTimeString() + ".jpg";
-        //char result_name[100];
-        //string s = getTimeString();
-        //char ss[14];
-        //strcpy(ss,s.c_str());
-        //cout << ss << endl;
-        //sprintf(result_name, "%s%d%s%s%s", IMG_CAL_NAME, i, "_", ss  ,".jpg");
-        imwrite(result_name, imgRezCalRezMat);
-        i++;
-    }
     /**
      * Part3运行Stitcher类进行图像拼接
      * Q: 是否需要求改Stitcher类？虽然现在看来是不需要的，默认参数也足够使用
