@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ubuntu/Downloads/clion-2019.2.1/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/ubuntu/ProgramFiles/clion-2019.2.1/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/ubuntu/Downloads/clion-2019.2.1/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/ubuntu/ProgramFiles/clion-2019.2.1/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/git/CatchAndDetect0
+CMAKE_SOURCE_DIR = /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/git/CatchAndDetect0/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/git/CatchAndDetect0/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/ubuntu/Downloads/clion-2019.2.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/ubuntu/ProgramFiles/clion-2019.2.1/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/ubuntu/Downloads/clion-2019.2.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/ubuntu/ProgramFiles/clion-2019.2.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/git/CatchAndDetect0/cmake-build-debug/CMakeFiles /home/ubuntu/git/CatchAndDetect0/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/git/CatchAndDetect0/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ CatchAndDetect: cmake_check_build_system
 CatchAndDetect/fast:
 	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/build
 .PHONY : CatchAndDetect/fast
+
+amimonLocalImg.o: amimonLocalImg.cpp.o
+
+.PHONY : amimonLocalImg.o
+
+# target to build an object file
+amimonLocalImg.cpp.o:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.o
+.PHONY : amimonLocalImg.cpp.o
+
+amimonLocalImg.i: amimonLocalImg.cpp.i
+
+.PHONY : amimonLocalImg.i
+
+# target to preprocess a source file
+amimonLocalImg.cpp.i:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.i
+.PHONY : amimonLocalImg.cpp.i
+
+amimonLocalImg.s: amimonLocalImg.cpp.s
+
+.PHONY : amimonLocalImg.s
+
+# target to generate assembly for a file
+amimonLocalImg.cpp.s:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.s
+.PHONY : amimonLocalImg.cpp.s
 
 circleProcess.o: circleProcess.cpp.o
 
@@ -231,6 +258,60 @@ imageProcess.cpp.s:
 	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/imageProcess.cpp.s
 .PHONY : imageProcess.cpp.s
 
+insightCatchImg.o: insightCatchImg.cpp.o
+
+.PHONY : insightCatchImg.o
+
+# target to build an object file
+insightCatchImg.cpp.o:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.o
+.PHONY : insightCatchImg.cpp.o
+
+insightCatchImg.i: insightCatchImg.cpp.i
+
+.PHONY : insightCatchImg.i
+
+# target to preprocess a source file
+insightCatchImg.cpp.i:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.i
+.PHONY : insightCatchImg.cpp.i
+
+insightCatchImg.s: insightCatchImg.cpp.s
+
+.PHONY : insightCatchImg.s
+
+# target to generate assembly for a file
+insightCatchImg.cpp.s:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.s
+.PHONY : insightCatchImg.cpp.s
+
+insightLocalImg.o: insightLocalImg.cpp.o
+
+.PHONY : insightLocalImg.o
+
+# target to build an object file
+insightLocalImg.cpp.o:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.o
+.PHONY : insightLocalImg.cpp.o
+
+insightLocalImg.i: insightLocalImg.cpp.i
+
+.PHONY : insightLocalImg.i
+
+# target to preprocess a source file
+insightLocalImg.cpp.i:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.i
+.PHONY : insightLocalImg.cpp.i
+
+insightLocalImg.s: insightLocalImg.cpp.s
+
+.PHONY : insightLocalImg.s
+
+# target to generate assembly for a file
+insightLocalImg.cpp.s:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.s
+.PHONY : insightLocalImg.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -267,6 +348,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CatchAndDetect"
 	@echo "... edit_cache"
+	@echo "... amimonLocalImg.o"
+	@echo "... amimonLocalImg.i"
+	@echo "... amimonLocalImg.s"
 	@echo "... circleProcess.o"
 	@echo "... circleProcess.i"
 	@echo "... circleProcess.s"
@@ -279,6 +363,12 @@ help:
 	@echo "... imageProcess.o"
 	@echo "... imageProcess.i"
 	@echo "... imageProcess.s"
+	@echo "... insightCatchImg.o"
+	@echo "... insightCatchImg.i"
+	@echo "... insightCatchImg.s"
+	@echo "... insightLocalImg.o"
+	@echo "... insightLocalImg.i"
+	@echo "... insightLocalImg.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

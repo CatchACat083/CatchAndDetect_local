@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu/git/CatchAndDetect0
+# Install script for directory: /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ubuntu/git/CatchAndDetect0/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

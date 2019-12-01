@@ -4,6 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/CatchAndDetect.dir/imageProcess.cpp.o"
   "CMakeFiles/CatchAndDetect.dir/imageCut.cpp.o"
   "CMakeFiles/CatchAndDetect.dir/circleProcess.cpp.o"
+  "CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.o"
+  "CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.o"
+  "CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.o"
   "CatchAndDetect.pdb"
   "CatchAndDetect"
 )
