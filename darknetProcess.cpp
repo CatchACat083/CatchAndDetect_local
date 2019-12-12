@@ -1,11 +1,11 @@
 //
-// Created by lin083 on 2019/10/15.
+// Created by Bosen on 2019/10/15.
 //
 # include "darknetProcess.h"
 
-// Initialize the parameters
-float confThreshold = 0.5; // Confidence threshold
-float nmsThreshold = 0.4;  // Non-maximum suppression threshold
+/// Initialize the parameters
+float confThreshold = 0.6; // Confidence threshold
+float nmsThreshold = 0.45;  // Non-maximum suppression threshold
 int inpWidth = 416;  // Width of network's input image
 int inpHeight = 416; // Height of network's input image
 vector<string> classes;

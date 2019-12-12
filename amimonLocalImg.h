@@ -1,5 +1,5 @@
 //
-// Created by ubuntu on 28/11/2019.
+// Created by Bosen on 28/11/2019.
 //
 
 #ifndef CATCHANDDETECT_AMIMONLOCALIMG_H
@@ -36,9 +36,9 @@
 using namespace std;
 using namespace cv;
 
-void imageLocal_amiomon(vector<Mat> imageCatchesVector,string imgListPath,string imgFileFloder);
+void imageLocal_amiomon(vector<Mat> & imageCatchesVector,string imgListPath,string imgFileFloder);
 
-string getTimeString();
+string getTimeString_ALI();
 
 
 #endif //CATCHANDDETECT_AMIMONLOCALIMG_H

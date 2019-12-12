@@ -1,10 +1,11 @@
 //
-// Created by ubuntu on 28/11/2019.
+// Created by Bosen on 28/11/2019.
+// 利用insight图传采集由QGC传出标志位的图像
 //
 
 #include "insightCatchImg.h"
 
-void imageCatch_insight(vector<Mat> imageCatchesVector, string rtspAddress, string qgcTxtFolder, string imgFileFolder, int imgTotalNum) {
+void imageCatch_insight(vector<Mat> & imageCatchesVector, string rtspAddress, string qgcTxtFolder, string imgFileFolder, int imgTotalNum) {
     //图像输入
     VideoCapture rtspVideoCapture;
 
@@ -50,7 +51,7 @@ void imageCatch_insight(vector<Mat> imageCatchesVector, string rtspAddress, stri
 
 
                 //将采集到的图像保存到本机
-                string imgFileName = imgFileFolder + to_string(thisImgNum) + "_" + getTimeString() + ".jpg";
+                string imgFileName = imgFileFolder + to_string(thisImgNum) + "_" + getTimeString_ICI() + ".jpg";
                 imwrite(imgFileName, imgCaptureMat);
                 cout << ">>>> Catch Image: " << thisImgNum << "success" << endl;
 
@@ -109,7 +110,7 @@ void imageReMap(Mat srcMat, Mat distMat) {
  * 返回当前时间(精确到秒)的String
  * @return string timeString
  */
-string getTimeString(){
+string getTimeString_ICI(){
     struct tm *myTimeStruct;
     time_t myTime;
     myTime = time(NULL);

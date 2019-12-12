@@ -150,7 +150,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=CatchAndDetect
+CMAKE_PROJECT_NAME:STATIC=CatchAndDetect_local
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -216,6 +216,12 @@ CatchAndDetect_BINARY_DIR:STATIC=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDet
 
 //Value Computed by CMake
 CatchAndDetect_SOURCE_DIR:STATIC=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local
+
+//Value Computed by CMake
+CatchAndDetect_local_BINARY_DIR:STATIC=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug
+
+//Value Computed by CMake
+CatchAndDetect_local_SOURCE_DIR:STATIC=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local
 
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/share/OpenCV

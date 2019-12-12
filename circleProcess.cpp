@@ -1,9 +1,12 @@
 //
-// Created by lin083 on 2019/10/29.
+// Created by Bosen on 2019/10/29.
+// 利用HSV颜色空间检测红色区域并利用Hough算法检测图像中的圆区域
 //
 # include "circleProcess.h"
+# define IMG_CIRCLE_PATH  "/home/ubuntu/Project/2019Match_ZSKT/Result/circlecutresult/circle"
 
-circle_class detectCircle(Mat & srcImage, vector<circle_class> & circleClass, Point2f pointInSitich){
+
+circle_class detectCircle(Mat & srcImage, vector<circle_class> & circleClass, Point2f pointInSitich, int i){
     circle_class thisCircle; //本图像中的一个红色圆
 
     //降低图像噪声
@@ -20,11 +23,11 @@ circle_class detectCircle(Mat & srcImage, vector<circle_class> & circleClass, Po
      */
     //lower mask
     Mat lowerMask;
-    inRange(srcImageHSV, Scalar(0,43,46), Scalar(20,255,240),lowerMask);//一般选择h值和s值，并设定v值为20-255
+    inRange(srcImageHSV, Scalar(0,60,0), Scalar(20,255,255),lowerMask);//一般选择h值和s值，并设定v值为20-255
     //upper mask
     Mat upperMask;
     //一般选择h值和s值，并设定v值为20-255
-    inRange(srcImageHSV, Scalar(150,43,46), Scalar(180,255,240),upperMask);
+    inRange(srcImageHSV, Scalar(150,60,0), Scalar(180,255,255),upperMask);
 
     //lower mask dilate
     Mat lowerDilate;
@@ -59,19 +62,27 @@ circle_class detectCircle(Mat & srcImage, vector<circle_class> & circleClass, Po
     //combile upper mask and lower mask
     Mat fullDilate;
     bitwise_or(lowerDilate,upperDilate,fullDilate);
+    string name = IMG_CIRCLE_PATH +to_string(i)+".jpg";
+    imwrite(name,fullDilate);
     vector<Vec3f>  fullCirclesHough;
 
     ///hough circle in full dildate mat
     ///此处需要根据实际值更改maxradius 和 maxradius
-    HoughCircles(fullDilate, fullCirclesHough, CV_HOUGH_GRADIENT, 1, 500, 75, 9, 0, 0);
+    HoughCircles(fullDilate, fullCirclesHough, CV_HOUGH_GRADIENT, 3, 500, 75, 110, 40, 60);
 
     //将该张图片中检测的圆加入到circleClass中
     for(int i = 0; i< fullCirclesHough.size(); i++) {
         circle_class thiscircleClass;
         thiscircleClass.left = fullCirclesHough[i][0] + pointInSitich.x;
         thiscircleClass.top = fullCirclesHough[i][1] + pointInSitich.y;
+        //thiscircleClass.left = fullCirclesHough[i][0];
+        //thiscircleClass.top = fullCirclesHough[i][1] ;
         thiscircleClass.radius = fullCirclesHough[i][2];
+
+        Point center(int(thiscircleClass.left), int(thiscircleClass.top));
+        cout << thiscircleClass.left << " " << thiscircleClass.top << endl;
+        int radius = round(thiscircleClass.radius);
+        circle(srcImage, center, radius, Scalar(255, 0, 0), 4, 4, 0);
         circleClass.push_back(thiscircleClass);
     }
-
 }

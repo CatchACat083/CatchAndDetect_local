@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="CatchAndDetect" targetName="CatchAndDetect" />
+      <config projectName="CatchAndDetect_local" targetName="CatchAndDetect" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -11,43 +11,43 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124f86f5-b30e-417b-b891-7348f357c988" name="Default Changelist" comment="commit amimon local cpp and insight onboard cpp 20191128">
-      <change afterPath="$PROJECT_DIR$/insightLocalImg.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/insightLocalImg.h" afterDir="false" />
+    <list default="true" id="124f86f5-b30e-417b-b891-7348f357c988" name="Default Changelist" comment="commit insight local cpp 20191201">
+      <change afterPath="$PROJECT_DIR$/ROSCatchImg.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ROSCatchImg.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imageForceStitch.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imageForceStitch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imagePreProcess.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imagePreProcess.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amimonLocalImg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/amimonLocalImg.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amimonLocalImg.h" beforeDir="false" afterPath="$PROJECT_DIR$/amimonLocalImg.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/circleProcess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/circleProcess.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/circleProcess.h" beforeDir="false" afterPath="$PROJECT_DIR$/circleProcess.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdCXX/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CatchAndDetect.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CatchAndDetect.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CatchAndDetect.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/darknetProcess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/darknetProcess.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/darknetProcess.h" beforeDir="false" afterPath="$PROJECT_DIR$/darknetProcess.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageCut.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/imageCut.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageCut.h" beforeDir="false" afterPath="$PROJECT_DIR$/imageCut.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageProcess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/imageProcess.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageProcess.h" beforeDir="false" afterPath="$PROJECT_DIR$/imageProcess.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img.txt" beforeDir="false" afterPath="$PROJECT_DIR$/img.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insightCatchImg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/insightCatchImg.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insightCatchImg.h" beforeDir="false" afterPath="$PROJECT_DIR$/insightCatchImg.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insightLocalImg.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/insightLocalImg.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insightLocalImg.h" beforeDir="false" afterPath="$PROJECT_DIR$/insightLocalImg.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,13 +72,17 @@
     <expand />
     <select />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TslWIF7v5zowWIM0iY9b2Tvu1E" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CLionProjects/imageStitch" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -86,9 +90,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -104,6 +111,30 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="CMake Application.Unnamed">
+    <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CatchAndDetect_local" TARGET_NAME="CatchAndDetect" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CatchAndDetect_local" RUN_TARGET_NAME="CatchAndDetect">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="ros_launch_run_config_type_id" factoryName="ROS Launch" temporary="true" path="file://$PROJECT_DIR$/imagePreProcess.cpp" ros_master_addr="http://localhost:11311" ros_master_port="11311" screen="false" log="false" wait="false" verbose="false" log_level="info">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Unnamed" />
+      <item itemvalue="ROS Launch.Unnamed" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="ROS Launch.Unnamed" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -130,6 +161,38 @@
       <workItem from="1574852666798" duration="467000" />
       <workItem from="1574923965340" duration="3687000" />
       <workItem from="1574934473628" duration="7636000" />
+      <workItem from="1575187341600" duration="434000" />
+      <workItem from="1575187785056" duration="94000" />
+      <workItem from="1575187935613" duration="3151000" />
+      <workItem from="1575200236680" duration="6819000" />
+      <workItem from="1575218799747" duration="2085000" />
+      <workItem from="1575273120650" duration="335000" />
+      <workItem from="1575277981006" duration="8000" />
+      <workItem from="1575289719202" duration="108000" />
+      <workItem from="1575289840499" duration="146000" />
+      <workItem from="1575290325524" duration="4439000" />
+      <workItem from="1575342410255" duration="1705000" />
+      <workItem from="1575351391011" duration="870000" />
+      <workItem from="1575361204435" duration="3546000" />
+      <workItem from="1575452619258" duration="3813000" />
+      <workItem from="1575461780993" duration="9638000" />
+      <workItem from="1575507583145" duration="10804000" />
+      <workItem from="1575535281235" duration="187000" />
+      <workItem from="1575538062875" duration="1079000" />
+      <workItem from="1575539651482" duration="32000" />
+      <workItem from="1575546976306" duration="12070000" />
+      <workItem from="1575560441412" duration="609000" />
+      <workItem from="1575592864245" duration="4627000" />
+      <workItem from="1575597970591" duration="2588000" />
+      <workItem from="1575601435039" duration="6226000" />
+      <workItem from="1575615356735" duration="2262000" />
+      <workItem from="1575619705959" duration="3513000" />
+      <workItem from="1575635963002" duration="11145000" />
+      <workItem from="1575677185809" duration="1751000" />
+      <workItem from="1575682155168" duration="6030000" />
+      <workItem from="1575697466744" duration="2135000" />
+      <workItem from="1575726895702" duration="7664000" />
+      <workItem from="1576144807564" duration="718000" />
     </task>
     <task id="LOCAL-00001" summary="commit amimon local cpp and insight onboard cpp 20191128">
       <created>1574939843658</created>
@@ -152,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574941235338</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit insight local cpp 20191201">
+      <created>1575187468762</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575187468762</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,15 +244,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit amimon local cpp and insight onboard cpp 20191128" />
     <MESSAGE value="commit readme 20191128" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit readme 20191128" />
+    <MESSAGE value="commit insight local cpp 20191201" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit insight local cpp 20191201" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/circleProcess.h</url>
-          <line>7</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/insightLocalImg.cpp</url>
+          <line>43</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

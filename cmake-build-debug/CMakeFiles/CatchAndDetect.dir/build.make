@@ -122,22 +122,9 @@ CMakeFiles/CatchAndDetect.dir/circleProcess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CatchAndDetect.dir/circleProcess.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/circleProcess.cpp -o CMakeFiles/CatchAndDetect.dir/circleProcess.cpp.s
 
-CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.o: CMakeFiles/CatchAndDetect.dir/flags.make
-CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.o: ../insightCatchImg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.o -c /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightCatchImg.cpp
-
-CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightCatchImg.cpp > CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.i
-
-CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightCatchImg.cpp -o CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.s
-
 CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.o: CMakeFiles/CatchAndDetect.dir/flags.make
 CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.o: ../amimonLocalImg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.o -c /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/amimonLocalImg.cpp
 
 CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.i: cmake_force
@@ -148,18 +135,44 @@ CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/amimonLocalImg.cpp -o CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.s
 
-CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.o: CMakeFiles/CatchAndDetect.dir/flags.make
-CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.o: ../insightLocalImg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.o -c /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightLocalImg.cpp
+CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.o: CMakeFiles/CatchAndDetect.dir/flags.make
+CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.o: ../ROSCatchImg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.o -c /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/ROSCatchImg.cpp
 
-CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightLocalImg.cpp > CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.i
+CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/ROSCatchImg.cpp > CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.i
 
-CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightLocalImg.cpp -o CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.s
+CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/ROSCatchImg.cpp -o CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.s
+
+CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.o: CMakeFiles/CatchAndDetect.dir/flags.make
+CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.o: ../imagePreProcess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.o -c /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/imagePreProcess.cpp
+
+CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/imagePreProcess.cpp > CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.i
+
+CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/imagePreProcess.cpp -o CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.s
+
+CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.o: CMakeFiles/CatchAndDetect.dir/flags.make
+CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.o: ../imageForceStitch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.o -c /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/imageForceStitch.cpp
+
+CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/imageForceStitch.cpp > CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.i
+
+CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/imageForceStitch.cpp -o CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.s
 
 # Object files for target CatchAndDetect
 CatchAndDetect_OBJECTS = \
@@ -168,9 +181,10 @@ CatchAndDetect_OBJECTS = \
 "CMakeFiles/CatchAndDetect.dir/imageProcess.cpp.o" \
 "CMakeFiles/CatchAndDetect.dir/imageCut.cpp.o" \
 "CMakeFiles/CatchAndDetect.dir/circleProcess.cpp.o" \
-"CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.o" \
 "CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.o" \
-"CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.o"
+"CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.o" \
+"CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.o" \
+"CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.o"
 
 # External object files for target CatchAndDetect
 CatchAndDetect_EXTERNAL_OBJECTS =
@@ -180,9 +194,10 @@ CatchAndDetect: CMakeFiles/CatchAndDetect.dir/darknetProcess.cpp.o
 CatchAndDetect: CMakeFiles/CatchAndDetect.dir/imageProcess.cpp.o
 CatchAndDetect: CMakeFiles/CatchAndDetect.dir/imageCut.cpp.o
 CatchAndDetect: CMakeFiles/CatchAndDetect.dir/circleProcess.cpp.o
-CatchAndDetect: CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.o
 CatchAndDetect: CMakeFiles/CatchAndDetect.dir/amimonLocalImg.cpp.o
-CatchAndDetect: CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.o
+CatchAndDetect: CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.o
+CatchAndDetect: CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.o
+CatchAndDetect: CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.o
 CatchAndDetect: CMakeFiles/CatchAndDetect.dir/build.make
 CatchAndDetect: /usr/local/lib/libopencv_stitching.so.3.4.6
 CatchAndDetect: /usr/local/lib/libopencv_superres.so.3.4.6
@@ -231,7 +246,7 @@ CatchAndDetect: /usr/local/lib/libopencv_photo.so.3.4.6
 CatchAndDetect: /usr/local/lib/libopencv_imgproc.so.3.4.6
 CatchAndDetect: /usr/local/lib/libopencv_core.so.3.4.6
 CatchAndDetect: CMakeFiles/CatchAndDetect.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable CatchAndDetect"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable CatchAndDetect"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CatchAndDetect.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

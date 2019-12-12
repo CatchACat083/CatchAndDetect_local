@@ -1,10 +1,11 @@
 //
-// Created by ubuntu on 28/11/2019.
+// Created by Bosen on 28/11/2019.
+// insight图传的本地图像测试方法
 //
 
 #include "insightLocalImg.h"
 
-void imageLocal_insight(vector<Mat> imageCatchesVector,string imgListPath,string imgFileFolder){
+void imageLocal_insight(vector<Mat> & imageCatchesVector,string imgListPath,string imgFileFolder){
     /**
   * Part1第一次读取图像 根据预先设定的图像畸变参数对connex数传采集的图像进行预处理
   * Q: 图像预处理部分只做了畸变处理并去除connex黑边 可以根据需要再添加
@@ -14,11 +15,12 @@ void imageLocal_insight(vector<Mat> imageCatchesVector,string imgListPath,string
     ifstream fileInputstream(imgListPath);
     string imgNameString;
     getline(fileInputstream, imgNameString);
+    cout << imgNameString << endl;
     Mat imgCaptureMat = imread(imgNameString);
 
     if(imgCaptureMat.rows == INSIGHT_IN_HEI && imgCaptureMat.cols == INSIGHT_IN_WID){
-        cout << ">>>> image capture success" << endl;
-    }else{cout << "!!!!! image capture wrong size" << endl;}
+        cout << ">>>> image capture success" << imgCaptureMat.size() << endl;
+    }else{cout << "!!!!! image capture wrong size" << imgCaptureMat.size() << endl;}
 
     //图像size
     Size imgSize;
@@ -26,18 +28,18 @@ void imageLocal_insight(vector<Mat> imageCatchesVector,string imgListPath,string
 
     // 设置相机畸变参数
     Mat cameraMatrix = Mat::eye(3, 3, CV_64F);
-    cameraMatrix.at<double>(0, 0) = 1.7045143537356953e+03;
+    cameraMatrix.at<double>(0, 0) = 1.1103660484579314e+03;
     cameraMatrix.at<double>(0, 1) = 0;
-    cameraMatrix.at<double>(0, 2) = 9.5950000000000000e+02;
-    cameraMatrix.at<double>(1, 1) = 1.7045143537356953e+03;
-    cameraMatrix.at<double>(1, 2) = 5.3950000000000000e+02;
+    cameraMatrix.at<double>(0, 2) = 640;
+    cameraMatrix.at<double>(1, 1) = 1.1103660484579314e+03;
+    cameraMatrix.at<double>(1, 2) = 360;
 
     Mat distCoeffs = Mat::zeros(5, 1, CV_64F);
-    distCoeffs.at<double>(0, 0) = -3.1946395398598881e-01;
-    distCoeffs.at<double>(1, 0) = 1.9135700460721553e-01;
+    distCoeffs.at<double>(0, 0) = -3.1915717708126401e-01;
+    distCoeffs.at<double>(1, 0) = 2.4807856799275141e-01;
     distCoeffs.at<double>(2, 0) = 0;
     distCoeffs.at<double>(3, 0) = 0;
-    distCoeffs.at<double>(4, 0) = -6.3363712039867705e-03;
+    distCoeffs.at<double>(4, 0) = -2.6705206827354411e-01;
 
     //畸变map计算
     Mat imgMap1, imgMap2;
@@ -59,11 +61,11 @@ void imageLocal_insight(vector<Mat> imageCatchesVector,string imgListPath,string
 
     cout << ">>>> frame 0 calibration success" << endl;
     cout << imgCalRezMat.rows << imgCalRezMat.cols << endl;
-    if(imgCalRezMat.rows == INSIGHT_CAL_HEI && imgCalRezMat.cols == INSIGHT_CAL_WID){
-        cout << ">>>> frame 0 calibration success" << endl;
-    }else{cout << "!!!!! frame 0 calibration wrong size" << endl;}
+    if(imgCalRezMat.rows == INSIGHT_CAL_WID && imgCalRezMat.cols == INSIGHT_CAL_HEI){
+        cout << ">>>> frame 0 calibration success" << imgCaptureMat.size() << endl;
+    }else{cout << "!!!!! frame 0 calibration wrong size" << imgCaptureMat.size()  << endl;}
 
-    string result_name = imgFileFolder + to_string(0) +"_"+ getTimeString() + ".jpg";
+    string result_name = imgFileFolder + to_string(0) +"_"+ getTimeString_ILI() + ".jpg";
 
     //将该帧图像加入到image_catches Vector中
     imageCatchesVector.push_back(imgCalRezMat);
@@ -85,20 +87,20 @@ void imageLocal_insight(vector<Mat> imageCatchesVector,string imgListPath,string
         //去除畸变造成的黑边_黑边在高度和宽度上都出现_高度上可用像素50_1030_宽度上可用像素25_1895
         resizeImage(imgCalMat,imgCalRezMat,INSIGHT_CAL_REZ_TOP,INSIGHT_CAL_REZ_LEFT,INSIGHT_CAL_REZ_HEI,INSIGHT_CAL_REZ_WID);
 
-        cout << ">>>> frame "<< i << " capture success" << endl;
+        cout << ">>>> frame "<< i << " capture success" << imgCaptureMat.size() << endl;
 
         //将照片旋转成为竖幅便于拼接
         transpose(imgCalRezMat, imgCalRezMat);
         flip(imgCalRezMat,imgCalRezMat,1);
 
-        if(imgCalRezMat.rows == INSIGHT_CAL_HEI && imgCalRezMat.cols == INSIGHT_CAL_WID){
-            cout << ">>>> frame "<< i << " calibration success" << endl;
-        }else{cout << "!!!!! frame "<< i << " calibration wrong size" << endl;}
+        if(imgCalRezMat.rows == INSIGHT_CAL_WID && imgCalRezMat.cols == INSIGHT_CAL_HEI){
+            cout << ">>>> frame "<< i << " calibration success" << imgCalRezMat.size() << endl;
+        }else{cout << "!!!!! frame "<< i << " calibration wrong size" << imgCalRezMat.size() << endl;}
 
         //将该帧图像加入到imageCatchesVector中
         imageCatchesVector.push_back(imgCalRezMat);
         //将每一帧图像保存在本机
-        string result_name = imgFileFolder + to_string(i) +"_"+ getTimeString() + ".jpg";
+        string result_name = imgFileFolder + to_string(i) +"_"+ getTimeString_ILI() + ".jpg";
         //char result_name[100];
         //string s = getTimeString();
         //char ss[14];
@@ -106,6 +108,7 @@ void imageLocal_insight(vector<Mat> imageCatchesVector,string imgListPath,string
         //cout << ss << endl;
         //sprintf(result_name, "%s%d%s%s%s", IMG_CAL_NAME, i, "_", ss  ,".jpg");
         imwrite(result_name, imgCalRezMat);
+        cout << "image catches vector size = " << imageCatchesVector.size() << endl;
         i++;
     }
 }
@@ -114,7 +117,7 @@ void imageLocal_insight(vector<Mat> imageCatchesVector,string imgListPath,string
  * 返回当前时间(精确到秒)的String
  * @return string timeString
  */
-string getTimeString(){
+string getTimeString_ILI(){
     struct tm *myTimeStruct;
     time_t myTime;
     myTime = time(NULL);

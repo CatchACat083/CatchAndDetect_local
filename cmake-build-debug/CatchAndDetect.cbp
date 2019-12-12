@@ -118,18 +118,6 @@
 		<Unit filename="/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/imageProcess.h">
 			<Option target="CatchAndDetect"/>
 		</Unit>
-		<Unit filename="/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightCatchImg.cpp">
-			<Option target="CatchAndDetect"/>
-		</Unit>
-		<Unit filename="/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightCatchImg.h">
-			<Option target="CatchAndDetect"/>
-		</Unit>
-		<Unit filename="/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightLocalImg.cpp">
-			<Option target="CatchAndDetect"/>
-		</Unit>
-		<Unit filename="/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/insightLocalImg.h">
-			<Option target="CatchAndDetect"/>
-		</Unit>
 		<Unit filename="/home/ubuntu/Project/2019Match_ZSKT/CatchAndDetect_local/main.cpp">
 			<Option target="CatchAndDetect"/>
 		</Unit>

@@ -1,5 +1,5 @@
 //
-// Created by ubuntu on 28/11/2019.
+// Created by Bosen on 28/11/2019.
 //
 
 #include <iostream>
@@ -33,9 +33,9 @@ using namespace cv;
 
 
 
-void imageCatch_insight(vector<Mat> imageCatchesVector, string rtspAddress, string qgcTxtFolder, string imgFileFolder, int imgTotalNum);
+void imageCatch_insight(vector<Mat> & imageCatchesVector, string rtspAddress, string qgcTxtFolder, string imgFileFolder, int imgTotalNum);
 
-string getTimeString();
+string getTimeString_ICI();
 
 void imageReMap(Mat srcMat, Mat distMat);
 

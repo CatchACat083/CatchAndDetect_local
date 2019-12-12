@@ -123,6 +123,33 @@ CatchAndDetect/fast:
 	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/build
 .PHONY : CatchAndDetect/fast
 
+ROSCatchImg.o: ROSCatchImg.cpp.o
+
+.PHONY : ROSCatchImg.o
+
+# target to build an object file
+ROSCatchImg.cpp.o:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.o
+.PHONY : ROSCatchImg.cpp.o
+
+ROSCatchImg.i: ROSCatchImg.cpp.i
+
+.PHONY : ROSCatchImg.i
+
+# target to preprocess a source file
+ROSCatchImg.cpp.i:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.i
+.PHONY : ROSCatchImg.cpp.i
+
+ROSCatchImg.s: ROSCatchImg.cpp.s
+
+.PHONY : ROSCatchImg.s
+
+# target to generate assembly for a file
+ROSCatchImg.cpp.s:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/ROSCatchImg.cpp.s
+.PHONY : ROSCatchImg.cpp.s
+
 amimonLocalImg.o: amimonLocalImg.cpp.o
 
 .PHONY : amimonLocalImg.o
@@ -231,6 +258,60 @@ imageCut.cpp.s:
 	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/imageCut.cpp.s
 .PHONY : imageCut.cpp.s
 
+imageForceStitch.o: imageForceStitch.cpp.o
+
+.PHONY : imageForceStitch.o
+
+# target to build an object file
+imageForceStitch.cpp.o:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.o
+.PHONY : imageForceStitch.cpp.o
+
+imageForceStitch.i: imageForceStitch.cpp.i
+
+.PHONY : imageForceStitch.i
+
+# target to preprocess a source file
+imageForceStitch.cpp.i:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.i
+.PHONY : imageForceStitch.cpp.i
+
+imageForceStitch.s: imageForceStitch.cpp.s
+
+.PHONY : imageForceStitch.s
+
+# target to generate assembly for a file
+imageForceStitch.cpp.s:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/imageForceStitch.cpp.s
+.PHONY : imageForceStitch.cpp.s
+
+imagePreProcess.o: imagePreProcess.cpp.o
+
+.PHONY : imagePreProcess.o
+
+# target to build an object file
+imagePreProcess.cpp.o:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.o
+.PHONY : imagePreProcess.cpp.o
+
+imagePreProcess.i: imagePreProcess.cpp.i
+
+.PHONY : imagePreProcess.i
+
+# target to preprocess a source file
+imagePreProcess.cpp.i:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.i
+.PHONY : imagePreProcess.cpp.i
+
+imagePreProcess.s: imagePreProcess.cpp.s
+
+.PHONY : imagePreProcess.s
+
+# target to generate assembly for a file
+imagePreProcess.cpp.s:
+	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/imagePreProcess.cpp.s
+.PHONY : imagePreProcess.cpp.s
+
 imageProcess.o: imageProcess.cpp.o
 
 .PHONY : imageProcess.o
@@ -257,60 +338,6 @@ imageProcess.s: imageProcess.cpp.s
 imageProcess.cpp.s:
 	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/imageProcess.cpp.s
 .PHONY : imageProcess.cpp.s
-
-insightCatchImg.o: insightCatchImg.cpp.o
-
-.PHONY : insightCatchImg.o
-
-# target to build an object file
-insightCatchImg.cpp.o:
-	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.o
-.PHONY : insightCatchImg.cpp.o
-
-insightCatchImg.i: insightCatchImg.cpp.i
-
-.PHONY : insightCatchImg.i
-
-# target to preprocess a source file
-insightCatchImg.cpp.i:
-	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.i
-.PHONY : insightCatchImg.cpp.i
-
-insightCatchImg.s: insightCatchImg.cpp.s
-
-.PHONY : insightCatchImg.s
-
-# target to generate assembly for a file
-insightCatchImg.cpp.s:
-	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightCatchImg.cpp.s
-.PHONY : insightCatchImg.cpp.s
-
-insightLocalImg.o: insightLocalImg.cpp.o
-
-.PHONY : insightLocalImg.o
-
-# target to build an object file
-insightLocalImg.cpp.o:
-	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.o
-.PHONY : insightLocalImg.cpp.o
-
-insightLocalImg.i: insightLocalImg.cpp.i
-
-.PHONY : insightLocalImg.i
-
-# target to preprocess a source file
-insightLocalImg.cpp.i:
-	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.i
-.PHONY : insightLocalImg.cpp.i
-
-insightLocalImg.s: insightLocalImg.cpp.s
-
-.PHONY : insightLocalImg.s
-
-# target to generate assembly for a file
-insightLocalImg.cpp.s:
-	$(MAKE) -f CMakeFiles/CatchAndDetect.dir/build.make CMakeFiles/CatchAndDetect.dir/insightLocalImg.cpp.s
-.PHONY : insightLocalImg.cpp.s
 
 main.o: main.cpp.o
 
@@ -348,6 +375,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CatchAndDetect"
 	@echo "... edit_cache"
+	@echo "... ROSCatchImg.o"
+	@echo "... ROSCatchImg.i"
+	@echo "... ROSCatchImg.s"
 	@echo "... amimonLocalImg.o"
 	@echo "... amimonLocalImg.i"
 	@echo "... amimonLocalImg.s"
@@ -360,15 +390,15 @@ help:
 	@echo "... imageCut.o"
 	@echo "... imageCut.i"
 	@echo "... imageCut.s"
+	@echo "... imageForceStitch.o"
+	@echo "... imageForceStitch.i"
+	@echo "... imageForceStitch.s"
+	@echo "... imagePreProcess.o"
+	@echo "... imagePreProcess.i"
+	@echo "... imagePreProcess.s"
 	@echo "... imageProcess.o"
 	@echo "... imageProcess.i"
 	@echo "... imageProcess.s"
-	@echo "... insightCatchImg.o"
-	@echo "... insightCatchImg.i"
-	@echo "... insightCatchImg.s"
-	@echo "... insightLocalImg.o"
-	@echo "... insightLocalImg.i"
-	@echo "... insightLocalImg.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

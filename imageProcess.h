@@ -1,5 +1,5 @@
 //
-// Created by lin083 on 2019/10/22.
+// Created by Bosen on 2019/10/22.
 //
 
 #ifndef CATCHANDDETECT_IMAGEPROCESS_H

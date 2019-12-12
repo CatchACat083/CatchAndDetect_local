@@ -1,5 +1,6 @@
 //
-// Created by lin083 on 2019/10/22.
+// Created by Bosen on 2019/10/22.
+// 定义了一些基础的图像处理函数，比如裁切image、手动imagestitch等
 //
 
 #include "imageProcess.h"
@@ -14,9 +15,7 @@ void resizeImage(Mat & img_src, Mat & img_rez, int row, int col, int height, int
 {
     Rect area(col, row, width, height);
     Mat img_region = img_src(area);
-
     resize(img_region, img_rez, img_rez.size(), 0,0,INTER_LINEAR);
-
     return;
 }
 

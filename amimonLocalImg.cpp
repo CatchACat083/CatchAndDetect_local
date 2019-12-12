@@ -1,10 +1,17 @@
 //
-// Created by ubuntu on 28/11/2019.
+// Created by Bosen on 28/11/2019.
+// 处理未经预处理的amimon connex图传采集的图像
 //
 
 #include "amimonLocalImg.h"
 
-void imageLocal_amiomon(vector<Mat> imageCatchesVector,string imgListPath,string imgFileFolder){
+/***
+ * 采集由amimon connex的本地图像
+ * @param imageCatchesVector
+ * @param imgListPath
+ * @param imgFileFolder
+ */
+void imageLocal_amiomon(vector<Mat> & imageCatchesVector,string imgListPath,string imgFileFolder) {
     /**
      * Part1第一次读取图像 根据预先设定的图像畸变参数对connex数传采集的图像进行预处理
      * Q: 图像预处理部分只做了畸变处理并去除connex黑边 可以根据需要再添加
@@ -42,8 +49,8 @@ void imageLocal_amiomon(vector<Mat> imageCatchesVector,string imgListPath,string
     //畸变map计算
     Mat imgMap1, imgMap2;
     initUndistortRectifyMap(cameraMatrix, distCoeffs, Mat(),
-                            getOptimalNewCameraMatrix(cameraMatrix, distCoeffs, imgSize, 1, imgSize, 0),
-                            imgSize, CV_16SC2, imgMap1, imgMap2);
+                               getOptimalNewCameraMatrix(cameraMatrix, distCoeffs, imgSize, 1, imgSize, 0),
+                               imgSize, CV_16SC2, imgMap1, imgMap2);
 
     Mat imgRezMat(CONNEX_IN_HEI, CONNEX_IN_WID, imgCaptureMat.type()); //去除connex图传上下黑边后的图像Mat
     Mat imgRezCalMat(CONNEX_IN_HEI, CONNEX_IN_WID, imgCaptureMat.type()); //畸变校正后的图像
@@ -66,7 +73,7 @@ void imageLocal_amiomon(vector<Mat> imageCatchesVector,string imgListPath,string
         cout << ">>>> frame 0 calibration success" << endl;
     }else{cout << "!!!!! frame 0 calibration wrong size" << endl;}
 
-    string result_name = imgFileFolder + to_string(0) +"_"+ getTimeString() + ".jpg";
+    string result_name = imgFileFolder + to_string(0) +"_"+ getTimeString_ALI() + ".jpg";
 
     //将该帧图像加入到image_catches Vector中
     imageCatchesVector.push_back(imgRezCalRezMat);
@@ -103,23 +110,31 @@ void imageLocal_amiomon(vector<Mat> imageCatchesVector,string imgListPath,string
         //将该帧图像加入到imageCatchesVector中
         imageCatchesVector.push_back(imgRezCalRezMat);
         //将每一帧图像保存在本机
-        string result_name = imgFileFolder + to_string(i) +"_"+ getTimeString() + ".jpg";
-        //char result_name[100];
-        //string s = getTimeString();
-        //char ss[14];
-        //strcpy(ss,s.c_str());
-        //cout << ss << endl;
-        //sprintf(result_name, "%s%d%s%s%s", IMG_CAL_NAME, i, "_", ss  ,".jpg");
+        string result_name = imgFileFolder + to_string(i) +"_"+ getTimeString_ALI() + ".jpg";
         imwrite(result_name, imgRezCalRezMat);
         i++;
     }
 }
 
+    /**处理无需去畸变的图像
+    int i = 1;
+    while (getline(fileInputstream, imgNameString)) {
+
+            Mat imgCaptureMat = imread(imgNameString);
+            string result_name = imgFileFolder + to_string(i) + "_" + getTimeString_ALI() + ".jpg";
+            imageCatchesVector.push_back(imgCaptureMat);
+            imwrite(result_name, imgCaptureMat);
+            cout << i << endl;
+            i++;
+    }
+
+}**/
+
 /**
  * 返回当前时间(精确到秒)的String
  * @return string timeString
  */
-string getTimeString(){
+string getTimeString_ALI(){
     struct tm *myTimeStruct;
     time_t myTime;
     myTime = time(NULL);

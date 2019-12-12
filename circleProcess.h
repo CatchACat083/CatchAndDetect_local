@@ -1,5 +1,5 @@
 //
-// Created by lin083 on 2019/10/29.
+// Created by Bosen on 2019/10/29.
 //
 
 #ifndef CATCHANDDETECT_CIRCLEPROCESS_H
@@ -21,7 +21,7 @@ struct circle_class{
     float radius; // 半径(以像素点表示)
 };
 
-circle_class detectCircle(Mat & srcImage,vector<circle_class> & circleClass, Point2f pointInSitich);
+circle_class detectCircle(Mat & srcImage,vector<circle_class> & circleClass, Point2f pointInSitich, int i);
 
 
 

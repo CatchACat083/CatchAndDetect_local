@@ -1,5 +1,5 @@
 //
-// Created by lin083 on 2019/10/25.
+// Created by Helu on 2019/10/25.
 //
 
 #ifndef CATCHANDDETECT_IMAGECUT_H
