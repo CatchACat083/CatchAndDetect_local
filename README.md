@@ -24,7 +24,7 @@
 
 4. 利用opencv stitcher类对图像进行拼接（其实尝试过自己写stiticher类，但是效果不如opencv的）
 
-5. 将拼接好的图像分为1920x1080大小，输入yolo网络中（每个图像中有一定的重叠防止目标出现在接缝处）(imageCut.cpp)
+5. 将拼接好的图像分为1180x640大小，输入yolo网络中（每个图像中有一定的重叠防止目标出现在接缝处）(imageCut.cpp)
 
 6. 将裁切好的图像进行圆的检测（分为HSV提取红色区域和圆hough检测两部分）(circleProcess.cpp)
 
